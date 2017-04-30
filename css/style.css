@@ -27,3 +27,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 #sidebar ul { list-style:none; margin-top:30px; }
 #sidebar ul li a { display:block; font-weight:bold; font-size:medium; color:#111111; font-family:"Droid Arabic Kufi",tahoma; padding:25px 5%;
 border-bottom:#954A00 1px solid }
+.home-icons a span { border:2px solid #393; background:#ffffff; text-align:center; }
+.home-icons a i { display:block; padding:20px; color:#393;  margin:12px; font-size:150pt }
+.home-icons a p { display:block; padding:20px; color:#393; font-size:x-large; font-weight:700 }
