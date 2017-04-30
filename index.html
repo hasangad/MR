@@ -84,8 +84,13 @@ table, th, td {
 .hr { margin-bottom:15px; display:block; overflow:hidden; width:100%; clear:both }
 .madad_body { margin-top:40px; }
 .no-padding { padding-left:0; padding-right:0 }
-.toggle { z-index:9999999999999999999; cursor:pointer; }
-
+.toggle { z-index:9999999999999999999; cursor:pointer;}
+#sidebar { z-index:9999999999999999999 ;
+background: #f9f9f9;
+background: -moz-linear-gradient(left, #f9f9f9 0%, #ededed 100%);
+background: -webkit-linear-gradient(left, #f9f9f9 0%,#ededed 100%);
+background: linear-gradient(to right, #f9f9f9 0%,#ededed 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#ededed',GradientType=1 );}
 #sidebar ul { list-style:none; margin-top:30px; }
 #sidebar ul li a { display:block; font-weight:bold; font-size:medium; color:#111111; font-family:"Droid Arabic Kufi",tahoma; padding:15px 4px; }
 </style>
@@ -94,7 +99,7 @@ table, th, td {
 
   <img class="toggle" src="images/icon-mobile.png" onclick="toggle_sidebar()" style="position: fixed; left: 10px; top: 10px" />
         
-<div id="sidebar" style="position: fixed; display: inline-block; top: 0px; height: 100%; width: 80%; right: -80%; background-color:#F90; transition: all 0.5s ease-in-out;">
+<div id="sidebar" style="position: fixed; display: inline-block; top: 0px; height: 100%; width: 80%; right: -80%; transition: all 0.5s ease-in-out;">
 <ul class="container no-padding">
 	<li><a href="">الرئيسية</a></li>
 	<li><a href="">عن مدد السعودية</a></li>
