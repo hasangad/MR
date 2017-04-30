@@ -59,52 +59,31 @@
             
             console.log(sidebar.style.left);
             
-            if(sidebar.style.right == "-80%")
+            if(sidebar.style.right == "-35%")
             {
-                sidebar.style.right = "0px";
+                sidebar.style.right = "0%";
             }
             else
             {
-                sidebar.style.right = "-80%";
+                sidebar.style.right = "-35%";
             }
         }
  </script>
 <link rel='stylesheet' id='bootstrap.min-css'  href='bs/css/bootstrap.min.css' type='text/css' media='all' />
 <link rel='stylesheet' id='bootstrap.min-css-rtl'  href='bs/css/bootstrap-rtl.min.css' type='text/css' media='all' />
 <link rel='stylesheet' id='bootstrap.min-css-controllers'  href='bs/css/controllers.css' type='text/css' media='all' />
-<style>
-/*body { background:#f8f8f8 url(images/logo-2.jpg) top center no-repeat; padding-top:120px; background-size:contain; }*/
-body { background:#f8f8f8; }
-table, th, td {
-	border: 1px solid black;
-}
-.madad_body {
-}
-.logo {width:100% !important; height:auto !important} 
-.hr { margin-bottom:15px; display:block; overflow:hidden; width:100%; clear:both }
-.madad_body { margin-top:40px; }
-.no-padding { padding-left:0; padding-right:0 }
-.toggle { z-index:9999999999999999999; cursor:pointer;}
-#sidebar { z-index:9999999999999999999 ;
-background: #f9f9f9;
-background: -moz-linear-gradient(left, #f9f9f9 0%, #ededed 100%);
-background: -webkit-linear-gradient(left, #f9f9f9 0%,#ededed 100%);
-background: linear-gradient(to right, #f9f9f9 0%,#ededed 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#ededed',GradientType=1 );}
-#sidebar ul { list-style:none; margin-top:30px; }
-#sidebar ul li a { display:block; font-weight:bold; font-size:medium; color:#111111; font-family:"Droid Arabic Kufi",tahoma; padding:15px 4px; }
-</style>
+<link rel='stylesheet' id='css-style'  href='css/style.css' type='text/css' media='all' />
 </head>
 <body>
 
   <img class="toggle" src="images/icon-mobile.png" onclick="toggle_sidebar()" style="position: fixed; left: 10px; top: 10px" />
         
-<div id="sidebar" style="position: fixed; display: inline-block; top: 0px; height: 100%; width: 80%; right: -80%; transition: all 0.5s ease-in-out;">
+<div id="sidebar" style="position: fixed; display: inline-block; top: 0px; height: 100%; width: 35%; right: -35%; transition: all 0.5s ease-in-out;">
 <ul class="container no-padding">
-	<li><a href="">الرئيسية</a></li>
-	<li><a href="">عن مدد السعودية</a></li>
-	<li><a href="">السيارات</a></li>
-	<li><a href="">التواصل</a></li>
+		<li><a href="index.html">الرئيسية</a></li>
+	<li><a href="about.html">عن مدد السعودية</a></li>
+	<li><a href="cars.html">السيارات</a></li>
+	<li><a href="contact.html">التواصل</a></li>
 </ul>
 </div>
 
