@@ -103,7 +103,7 @@
     <string>100</string>
     </gap:config-file>
 	
-	
+	<splash  src="images/logo-2.jpg" />
 	<splash src="images/logo-2.jpg" platform="android" qualifier="ldpi" />
 <splash src="images/logo-2.jpg" platform="android" qualifier="mdpi" />
 <splash src="images/logo-2.jpg" platform="android" qualifier="hdpi" />
