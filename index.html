@@ -52,26 +52,31 @@
  </script>
 <link rel='stylesheet' id='bootstrap.min-css'  href='bs/css/bootstrap.min.css' type='text/css' media='all' />
 <link rel='stylesheet' id='bootstrap.min-css-rtl'  href='bs/css/bootstrap-rtl.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap.min-css-controllers'  href='bs/css/controllers.css' type='text/css' media='all' />
 <style>
+body { background:#f8f8f8 url(images/logo-2.jpg) top center no-repeat; padding-top:150px; }
 table, th, td {
 	border: 1px solid black;
 }
 .madad_body {
 }
-.logo { max-width:90% !important} 
+.logo { max-width:100% !important} 
+.hr { margin-bottom:15px; display:block; overflow:hidden; width:100%; clear:both }
+.madad_body { margin-top:150px; }
 </style>
 </head>
 <body>
-<div class="madad_body container"> <a href="index.html"><img src="images/logo.png" alt="" title="" width="567" height="256" class="logo"></a>
+<!--<a href="index.html"><img src="images/logo-2.jpg" alt="" title="" width="567" height="256" class="logo"></a>-->
+
+<div class="madad_body container"> 
+
   <form id="formElem" name="formElem" action="" method="post">
-    <div class="reservation-item">
-      <div class="reservation-item-header">
-        <div class="reservation-item-title"> مكان الحجز<br>
-        </div>
-      </div>
-      <div class="reservation-item-body">
-        <div class="styled-select-dropdown wide-dropdown">
-          <select name="pickup_location_id" id="pickup_location_id" class="home-select form-control">
+
+        <div class="col-xs-12">
+        
+        <label class="col-xs-3"> مكان الحجز</label>
+  
+          <select name="pickup_location_id" id="pickup_location_id" class="home-select form-control col-xs-9">
             <option value="" selected="selected">مدينة / المكان:</option>
             <option value="12">الدمام 1 - حى الاتصالات - شارع الامير نايف محل 6</option>
             <option value="13">الدمام 2</option>
@@ -90,12 +95,21 @@ table, th, td {
             <option value="14">جده 3 - حى الروضة</option>
             <option value="15">جده 4 - شارع فلسطين</option>
           </select>
+          </div>
+          
+           
+           <div class="hr"></div> 
+
+
+        <div class="col-xs-12">
+                <label class="col-xs-3">التاريخ</label>
+          <input id="pickup_date" name="pickup_date" type="date" value="التاريخ" class="form-control col-xs-9">
         </div>
-        <div class="inline-div">
-          <input id="pickup_date" name="pickup_date" type="date" value="التاريخ" class="form-control">
-        </div>
-        <div class="styled-select-dropdown narrow-dropdown">
-          <select id="pickup_time" name="pickup_time" class="form-control">
+                   <div class="hr"></div> 
+
+          <div class="col-xs-12">
+                <label class="col-xs-3">الوقت</label>
+          <select id="pickup_time" name="pickup_time" class="form-control  col-xs-9">
             <option value="00:00:00">12:00 ص</option>
             <option value="00:30:00">12:30 ص</option>
             <option value="01:00:00">1:00 ص</option>
@@ -146,19 +160,18 @@ table, th, td {
             <option value="23:30:00">11:30 م</option>
           </select>
         </div>
-        <div class="top-padded">
+        
+                   <div class="hr"></div> 
+
+       <!-- <div class="top-padded">
           <input id="booking_code" value="لدي رقم الحجز:" type="text" name="booking_code" onfocus="if(this.value == 'لدي رقم الحجز:') {this.value=''}" onblur="if(this.value == ''){this.value ='لدي رقم الحجز:'}">
-        </div>
-      </div>
-    </div>
-    <div class="reservation-item">
-      <div class="reservation-item-header">
-        <div class="reservation-item-title"> مكان التسليم<br>
-        </div>
-      </div>
-      <div class="reservation-item-body">
-        <div class="styled-select-dropdown wide-dropdown">
-          <select name="dropoff_location_id" id="dropoff_location_id" class="home-select form-control">
+        </div>-->
+     
+    <div class="col-xs-12">
+        
+        <label class="col-xs-3"> مكان التسليم </label>
+       
+          <select name="dropoff_location_id" id="dropoff_location_id" class="home-select form-control col-xs-9">
             <option value="" selected="selected">مدينة / المكان:</option>
             <option value="12">الدمام 1 - حى الاتصالات - شارع الامير نايف محل 6</option>
             <option value="13">الدمام 2</option>
@@ -178,12 +191,15 @@ table, th, td {
             <option value="15">جده 4 - شارع فلسطين</option>
           </select>
         </div>
-        <div class="inline-div">
-          <input id="dropoff_date" name="dropoff_date" type="text" value="التاريخ:" readonly autocomplete="OFF" class="hasDatepicker">
-        </div>
-        <div class="inline-div"> <a id="dropoff_date_datepicker_image" href="javascript:;"> </a> </div>
-        <div class="styled-select-dropdown narrow-dropdown">
-          <select id="dropoff_time" name="dropoff_time" class="form-control">
+        
+                   <div class="hr"></div> 
+
+        
+        
+         <div class="col-xs-12">
+                <label class="col-xs-3">التاريخ</label>
+         
+          <select id="dropoff_time" name="dropoff_time" class="form-control col-xs-9">
             <option value="00:00:00">12:00 ص</option>
             <option value="00:30:00">12:30 ص</option>
             <option value="01:00:00">1:00 ص</option>
@@ -234,32 +250,43 @@ table, th, td {
             <option value="23:30:00">11:30 م</option>
           </select>
         </div>
-      </div>
-    </div>
-    <div class="reservation-item">
-      <div class="reservation-item-header">
-        <div class="reservation-item-title"> نوع السيارة<br>
-        </div>
-      </div>
-      <div class="reservation-item-body">
-        <input type="hidden" name="nrs_came_from_step1" value="yes" class="form-control">
-        <div class="styled-select-dropdown wide-dropdown">
-          <select name="body_type_id" id="body_type_id" class="form-control">
+        
+                   <div class="hr"></div> 
+
+     
+      <div class="col-xs-12">
+     <label class="col-xs-3"> <strong>نوع السيارة</strong> </label>
+     </div>
+     
+                <div class="hr"></div> 
+
+       
+        <input type="hidden" name="nrs_came_from_step1" value="yes" class="form-control col-xs-9">
+       <div class="col-xs-12">
+                <label class="col-xs-3">الدرجة</label>
+          <select name="body_type_id" id="body_type_id" class="form-control col-xs-9">
             <option value="0" selected="selected">الدرجة:</option>
             <option value="1">سيدان / متوسطة</option>
             <option value="2">سيدان / فئات</option>
             <option value="3">فان SUV</option>
           </select>
         </div>
-        <div class="styled-select-dropdown wide-dropdown">
-          <select name="fuel_type_id" id="fuel_type_id" class="form-control">
-            <option value="0" selected="selected">نوع الوقود:</option>
+        
+                   <div class="hr"></div> 
+
+         <div class="col-xs-12">
+                <label class="col-xs-3">نوع الوقود </label>
+          <select name="fuel_type_id" id="fuel_type_id" class="form-control  col-xs-9">
+            <option value="0" selected="selected"> -- </option>
             <option value="1">بنزين 91</option>
             <option value="2">بنزين 95</option>
           </select>
         </div>
-        <div class="top-padded-submit">
-          <input id="nrs_do_search" type="submit" name="nrs_do_search" value="بحث" class="btn btn-success">
+        
+                   <div class="hr"></div> 
+
+        <div class="col-xs-12">
+          <input id="nrs_do_search" type="submit" name="nrs_do_search" value="بحث" class="btn btn-success col-xs-12">
         </div>
       </div>
     </div>
