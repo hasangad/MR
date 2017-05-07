@@ -6,49 +6,7 @@
 <!--<base href="http://madadrental.com/">-->
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript">
- //https://phonegappro.com/tutorials/how-to-parse-read-json-using-phonegap-apache-cordova/
- //https://phonegappro.com/tutorials/build-mobile-apps-with-wordpress-using-phonegap-part-1/
- 
- /*.htaccess ----------------------------------
- 
- <IfModule mod_headers.c>
-  <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$">
-    Header set Access-Control-Allow-Origin "*"
-  </FilesMatch>
-</IfModule>
- 
- */
- 
- $(document).ready(function() { 
- $.getJSON("http://msyserp.com/api/?p=47&json=1",function(result){ 
- $.each(result, function(i , field){
- $("#output").append("<tr><td>"+ field.id + "</td><td>"+ field.title + "</td></tr>");
- });
- });
- /*$.ajax({
- type: "GET",
- url: "http://msyserp.com/web-service-api/?view_all=table&&admin=mallam",
- crossDomain: true,
- cache: false,
- success: function(result){
- var result=$.parseJSON(result);
- $.each(result, function(i, field){
- //$("#output").append("Title: "+ field.title + " duration: "+field.duration +" Price:"+field.price+"<br/>");
-  $("#output").append("<td>"+ field.id + "</td><td>"+field.title +"</td><td>"+field.type +"</td>");
-
- });
- }
- });*/
- });
  $(document).ready(function() {
-   /*var url="http://msyserp.com/?json=get_recent_posts";
-   $.getJSON(url,function(result){
-    $.each(result.posts, function(i, field){
-       var id=field.id;
-       $("#listview").append("<tr><td><h2>"+id+"<h2></td><td>"+field.title+"</td><td>"+field.type+"</td><tr>");
-    });
-   });*/
-  
    
  });
  
@@ -69,6 +27,32 @@
             }
         }
  </script>
+ 
+   <script>
+
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
+
+
+var car_id = getUrlParameter('car_id');
+
+$(".car_id").val(car_id);
+
+
+</script>
+ 
 <link rel='stylesheet' id='bootstrap.min-css'  href='bs/css/bootstrap.min.css' type='text/css' media='all' />
 <link rel='stylesheet' id='bootstrap.min-css-rtl'  href='bs/css/bootstrap-rtl.min.css' type='text/css' media='all' />
 <link rel='stylesheet' id='bootstrap.min-css-controllers'  href='bs/css/controllers.css' type='text/css' media='all' />
@@ -92,130 +76,59 @@
 
 <div class="madad_body container"> 
 
-<!--<script type="text/javascript">
+<div id="returnmessage" class="alert alert-success" style="display:none">تم إرسال طلب حجزك بنجاح!</div>
 
-$(".btn").click(function(){
-    $.get("cars.html", function(data, status){
-        alert("car_id: " + data + "\nStatus: " + status);
-    });
-});
-</script>-->
-<p id="returnmessage"></p>
- <!-- <form name="send_reserv" action="mailto:hasan.gadallah@gmail.com" method="post" enctype="text/plain">-->
-  <form name="send_reserv" action="mailto:hasan.gadallah@gmail.com" method="post" enctype="text/plain">
+  <form name="send_reserv" id="form"  method="get" enctype="text/plain">
   
-  <div class="col-xs-12"><label class="col-xs-3">الإسم</label> <input type="text"  value="" class="name form-control col-xs-9"></div>
-  <div class="col-xs-12"><label class="col-xs-3">رقم الجوال</label> <input type="text" value="" class="mobile form-control col-xs-9"></div>
-  <div class="col-xs-12"><label class="col-xs-3">البريد الإلكتروني</label> <input type="text" value="" class="email form-control col-xs-9"></div>
-    <div class="col-xs-12"><label class="col-xs-3">ملاحظات</label> <textarea class="notes form-control col-xs-9"></textarea></div>
-         <input type="hidden" class="car_id" name="car_id">
-   <input type="submit" class="btn btn-warning col-xs-12" onClick="" value="حجز">
+  <div class="col-xs-12"><label class="col-xs-3">الإسم</label> <input  id="name" type="text"  value="" class="name form-control col-xs-9"></div>
+  <div class="col-xs-12"><label class="col-xs-3">رقم الجوال</label> <input  id="contact" type="text" value="" class="mobile form-control col-xs-9"></div>
+  <div class="col-xs-12"><label class="col-xs-3">البريد الإلكتروني</label> <input  id="email" type="text" value="" class="email form-control col-xs-9"></div>
+    <div class="col-xs-12"><label class="col-xs-3">ملاحظات</label> <textarea id="message" class="notes form-control col-xs-9"></textarea></div>
+    <input type="hidden" class="car_id" id="car_id" name="car_id">
+   <!--<input type="submit" id="submit" class="btn btn-warning col-xs-12" value="حجز">-->
+   <button type="button" id="submit" class="btn btn-warning col-xs-12"  onclick="">حجز</button>
 
-
-  
   </form>
-  
-  <script>
-
-var getUrlParameter = function getUrlParameter(sParam) {
-    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
-
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
-
-        if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : sParameterName[1];
-        }
-    }
-};
-
-
-var car_id = getUrlParameter('car_id');
-
-$(".car_id").val(car_id);
-
-/*$(document).ready(function() {
-$(".btn").click(function() {
-var name = $(".name").val();
-var contact = $(".mobile").val();
-var email = $(".email").val();
-var message = $(".notes").val();
-$("#returnmessage").empty(); // To empty previous error/success message.
-// Checking for blank fields.
-if (name == '' || email == '' || contact == '') {
-alert("Please Fill Required Fields");
-} else {
-// Returns successful data submission message when the entered information is stored in database.
-$.post("contact_form.php", {
-name1: name,
-email1: email,
-message1: message,
-contact1: contact
-}, function(data) {
-$("#returnmessage").append(data); // Append returned message to message paragraph.
-if (data == "Your Query has been received, We will contact you soon.") {
-$("#form")[0].reset(); // To reset form fields on success.
-}
-});
-}
-});
-});*/
-
-</script>
-
-
-<!--SOURCE ::::::::::::: https://www.formget.com/jquery-contact-form/ -->
-
-<div id="mainform">
-<h2>Simple jQuery Contact Form With Validation</h2>
-<!-- Required Div Starts Here -->
-<form id="form">
-<h3>Contact Form</h3>
-<p id="returnmessage"></p>
-<label>Name: <span>*</span></label>
-<input type="text" id="name" placeholder="Name"/>
-<label>Email: <span>*</span></label>
-<input type="text" id="email" placeholder="Email"/>
-<label>Contact No: <span>*</span></label>
-<input type="text" id="contact" placeholder="10 digit Mobile no."/>
-<label>Message:</label>
-<textarea id="message" placeholder="Message......."></textarea>
-<input type="button" id="submit" value="Send Message"/>
-</form>
-</div>
-
-<script>
+   <script>
 $(document).ready(function() {
 $("#submit").click(function() {
-	alert("testing ....");
+//function send_mail(){
+//	alert("testing ....");
 var name = $("#name").val();
 var email = $("#email").val();
 var message = $("#message").val();
 var contact = $("#contact").val();
-$("#returnmessage").empty(); // To empty previous error/success message.
+/*var car_id = $("#car_id").val();*/
+var car_id = getUrlParameter('car_id');
+//alert(car_id);
+$(".car_id").val(car_id);
+//alert("http://app.madadrental.com/send-mail.php?name1="+name+"&email1="+email+"&car_id1="+car_id+"&message1="+message+"&contact1="+contact+"");
+//$("#returnmessage").empty(); // To empty previous error/success message.
 // Checking for blank fields.
 if (name == '' || email == '' || contact == '') {
 alert("Please Fill Required Fields");
 } else {
-// Returns successful data submission message when the entered information is stored in database.
-$.post("http://madadrental.com/app/send-email.php", {
-name1: name,
-email1: email,
-message1: message,
-contact1: contact
-}, function(data) {
-$("#returnmessage").append(data); // Append returned message to message paragraph.
-if (data == "Your Query has been received, We will contact you soon.") {
-$("#form")[0].reset(); // To reset form fields on success.
-}
-});
+  var url="http://app.madadrental.com/send-mail.php?name1="+name+"&email1="+email+"&car_id1="+car_id+"&message1="+message+"&contact1="+contact+"";
+  $.getJSON(url);
+    //$.getJSON(url, function(data) {
+    // console.log(data); //see your data ( works in Chrome / FF with firebug)
+     //console.log(data["msg"][0]) //should output 1
+	//});
+	
+	$("form").fadeOut();
+	$("#returnmessage").fadeIn();
 }
 });
 });
 </script>
+</div>
+
+<div id="testfield"></div>
+  
+
+
+
+<!--SOURCE ::::::::::::: https://www.formget.com/jquery-contact-form/ -->
 
 </div>
 <!-- End of madad body -->
