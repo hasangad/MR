@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>مدد السعودية لتأجير السيارات</title>
+<!--<base href="http://madadrental.com/">-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+ //https://phonegappro.com/tutorials/how-to-parse-read-json-using-phonegap-apache-cordova/
+ //https://phonegappro.com/tutorials/build-mobile-apps-with-wordpress-using-phonegap-part-1/
+ 
+ /*.htaccess ----------------------------------
+ 
+ <IfModule mod_headers.c>
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
+ 
+ */
+ 
+ $(document).ready(function() { 
+ $.getJSON("http://msyserp.com/api/?p=47&json=1",function(result){ 
+ $.each(result, function(i , field){
+ $("#output").append("<tr><td>"+ field.id + "</td><td>"+ field.title + "</td></tr>");
+ });
+ });
+ /*$.ajax({
+ type: "GET",
+ url: "http://msyserp.com/web-service-api/?view_all=table&&admin=mallam",
+ crossDomain: true,
+ cache: false,
+ success: function(result){
+ var result=$.parseJSON(result);
+ $.each(result, function(i, field){
+ //$("#output").append("Title: "+ field.title + " duration: "+field.duration +" Price:"+field.price+"<br/>");
+  $("#output").append("<td>"+ field.id + "</td><td>"+field.title +"</td><td>"+field.type +"</td>");
+
+ });
+ }
+ });*/
+ });
+ $(document).ready(function() {
+   /*var url="http://msyserp.com/?json=get_recent_posts";
+   $.getJSON(url,function(result){
+    $.each(result.posts, function(i, field){
+       var id=field.id;
+       $("#listview").append("<tr><td><h2>"+id+"<h2></td><td>"+field.title+"</td><td>"+field.type+"</td><tr>");
+    });
+   });*/
+  
+   
+ });
+ 
+ function toggle_sidebar()
+        {
+			
+            var sidebar = document.getElementById("sidebar");
+            
+            console.log(sidebar.style.left);
+            
+            if(sidebar.style.right == "-35%")
+            {
+                sidebar.style.right = "0%";
+            }
+            else
+            {
+                sidebar.style.right = "-35%";
+            }
+        }
+ </script>
+<link rel='stylesheet' id='bootstrap.min-css'  href='bs/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap.min-css-rtl'  href='bs/css/bootstrap-rtl.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap.min-css-controllers'  href='bs/css/controllers.css' type='text/css' media='all' />
+<link rel='stylesheet' id='css-style'  href='css/style.css' type='text/css' media='all' />
+</head>
+<body>
+
+  <img class="toggle" src="images/icon-mobile.png" onclick="toggle_sidebar()" style="position: fixed; left: 10px; top: 10px" />
+        
+<div id="sidebar" style="position: fixed; display: inline-block; top: 0px; height: 100%; width: 35%; right: -35%; transition: all 0.5s ease-in-out;">
+<ul class="container no-padding">
+		<li><a href="index.html">الرئيسية</a></li>
+	<li><a href="about.html">عن مدد السعودية</a></li>
+	<li><a href="cars.html">السيارات</a></li>
+	<!--<li><a href="reserve.html">حجز</a></li>-->
+	<li><a href="contact.html">التواصل</a></li>
+</ul>
+</div>
+
+<a href="index.html" class="container-fluid no-padding"><img src="images/logo-2.jpg" alt="" title="" width="567" height="256" class="logo"></a>
+
+<div class="madad_body container"> 
+
+<!--<script type="text/javascript">
+
+$(".btn").click(function(){
+    $.get("cars.html", function(data, status){
+        alert("car_id: " + data + "\nStatus: " + status);
+    });
+});
+</script>-->
+<p id="returnmessage"></p>
+ <!-- <form name="send_reserv" action="mailto:hasan.gadallah@gmail.com" method="post" enctype="text/plain">-->
+  <form name="send_reserv" action="mailto:hasan.gadallah@gmail.com" method="post" enctype="text/plain">
+  
+  <div class="col-xs-12"><label class="col-xs-3">الإسم</label> <input type="text"  value="" class="name form-control col-xs-9"></div>
+  <div class="col-xs-12"><label class="col-xs-3">رقم الجوال</label> <input type="text" value="" class="mobile form-control col-xs-9"></div>
+  <div class="col-xs-12"><label class="col-xs-3">البريد الإلكتروني</label> <input type="text" value="" class="email form-control col-xs-9"></div>
+    <div class="col-xs-12"><label class="col-xs-3">ملاحظات</label> <textarea class="notes form-control col-xs-9"></textarea></div>
+         <input type="hidden" class="car_id" name="car_id">
+   <input type="submit" class="btn btn-warning col-xs-12" onClick="" value="حجز">
+
+
+  
+  </form>
+  
+  <script>
+
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
+
+
+var car_id = getUrlParameter('car_id');
+
+$(".car_id").val(car_id);
+
+/*$(document).ready(function() {
+$(".btn").click(function() {
+var name = $(".name").val();
+var contact = $(".mobile").val();
+var email = $(".email").val();
+var message = $(".notes").val();
+$("#returnmessage").empty(); // To empty previous error/success message.
+// Checking for blank fields.
+if (name == '' || email == '' || contact == '') {
+alert("Please Fill Required Fields");
+} else {
+// Returns successful data submission message when the entered information is stored in database.
+$.post("contact_form.php", {
+name1: name,
+email1: email,
+message1: message,
+contact1: contact
+}, function(data) {
+$("#returnmessage").append(data); // Append returned message to message paragraph.
+if (data == "Your Query has been received, We will contact you soon.") {
+$("#form")[0].reset(); // To reset form fields on success.
+}
+});
+}
+});
+});*/
+
+</script>
+
+
+<!--SOURCE ::::::::::::: https://www.formget.com/jquery-contact-form/ -->
+
+<div id="mainform">
+<h2>Simple jQuery Contact Form With Validation</h2>
+<!-- Required Div Starts Here -->
+<form id="form">
+<h3>Contact Form</h3>
+<p id="returnmessage"></p>
+<label>Name: <span>*</span></label>
+<input type="text" id="name" placeholder="Name"/>
+<label>Email: <span>*</span></label>
+<input type="text" id="email" placeholder="Email"/>
+<label>Contact No: <span>*</span></label>
+<input type="text" id="contact" placeholder="10 digit Mobile no."/>
+<label>Message:</label>
+<textarea id="message" placeholder="Message......."></textarea>
+<input type="button" id="submit" value="Send Message"/>
+</form>
+</div>
+
+<script>
+$(document).ready(function() {
+$("#submit").click(function() {
+	alert("testing ....");
+var name = $("#name").val();
+var email = $("#email").val();
+var message = $("#message").val();
+var contact = $("#contact").val();
+$("#returnmessage").empty(); // To empty previous error/success message.
+// Checking for blank fields.
+if (name == '' || email == '' || contact == '') {
+alert("Please Fill Required Fields");
+} else {
+// Returns successful data submission message when the entered information is stored in database.
+$.post("http://madadrental.com/app/send-email.php", {
+name1: name,
+email1: email,
+message1: message,
+contact1: contact
+}, function(data) {
+$("#returnmessage").append(data); // Append returned message to message paragraph.
+if (data == "Your Query has been received, We will contact you soon.") {
+$("#form")[0].reset(); // To reset form fields on success.
+}
+});
+}
+});
+});
+</script>
+
+</div>
+<!-- End of madad body -->
+
+</body>
+</html>

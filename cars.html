@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <title>مدد السعودية لتأجير السيارات</title>
 <!--<base href="http://madadrental.com/">-->
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript">
  //https://phonegappro.com/tutorials/how-to-parse-read-json-using-phonegap-apache-cordova/
  //https://phonegappro.com/tutorials/build-mobile-apps-with-wordpress-using-phonegap-part-1/
@@ -83,8 +84,8 @@
 	<li><a href="index.html">الرئيسية</a></li>
 	<li><a href="about.html">عن مدد السعودية</a></li>
 	<li><a href="cars.html">السيارات</a></li>
-	<!--<li><a href="reserve.html">حجز</a></li>
-	<li><a href="contact.html">التواصل</a></li>-->
+	<!--<li><a href="reserve.html">حجز</a></li>-->
+	<li><a href="contact.html">التواصل</a></li>
 </ul>
 </div>
 
@@ -96,8 +97,31 @@
 
 <h4>السيارات</h4>
 <div class="hr"></div>
+<!--<SCRIPT LANGUAGE="JavaScript">
+function testResults (form) {
+    var TestVar = form.inputbox.value;
+    alert ("You typed: " + TestVar);
+}
+</SCRIPT>
+<FORM NAME="myform" ACTION="" METHOD="GET">Enter something in the box: <BR>
+<INPUT TYPE="text" NAME="inputbox" VALUE=""><P>
+<INPUT TYPE="button" NAME="button" Value="Click" onClick="testResults(this.form)">
+</FORM>-->
 
-<div class="col-xs-12 car-item">
+
+<script>
+/*function myFunction(form) {
+	
+	
+	var TestVar = form.car_id.value;
+    alert ("You typed: " + TestVar);
+			
+   
+}*/
+</script>
+
+<form id="frm777" method="GET" action="send_reserv.html" class="col-xs-12 car-item">
+<!--<form id="frm777" method="GET" action="send_reserv.html" class="col-xs-12 car-item">-->
 
 <img src="images/cars/sonata-2017.png" class="col-xs-12" >
 
@@ -124,11 +148,17 @@
 <div class="hr"></div>
 <div class="hr"></div>
 <div class="hr"></div>
-<!--<a href="" class="btn btn-warning col-xs-12"><strong>حجز</strong></a>-->
+
+<!--<input type="text" name="car_data" class="car_data" value="">-->
+<input type="hidden" name="car_id" value="777">
+<input type="submit" class="btn btn-warning col-xs-12" onClick="" value="حجز">
+<!--<input type="button" class="btn btn-warning col-xs-12" onClick="myFunction(this.form)" value="حجز">-->
 
 </div>
+</form>
 
-</div>
+
+
 <div class="col-xs-12 car-item">
 
 <img src="images/cars/sunny-2016.jpg" class="col-xs-12" >
