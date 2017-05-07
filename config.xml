@@ -4,9 +4,9 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.MadadRental"
-        version   = "1.0.0">
+        version   = "2.0.0">
 
-    <name>Madad Rental  مدد السعودية</name>
+    <name>مدد السعودية لتأجير السيارات</name>
 
     <description>
         مدد السعودية لتأجير السيارات
