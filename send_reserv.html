@@ -214,9 +214,6 @@ $(".car_id").val(car_id);
         
                    <div class="hr"></div> 
 
-       
-      </div>
-    </div>
     
     <div class="col-xs-12"><label class="col-xs-3">ملاحظات</label> <textarea id="message" class="notes form-control col-xs-9"></textarea></div>
     <input type="hidden" class="car_id" id="car_id" name="car_id">
@@ -259,11 +256,12 @@ alert("Please Fill Required Fields");
      //alert(data.msg);
 	 
 	 if(data.msg === "Sent") { 
-	 
+	  
 	 //alert("تم إرسال طلب حجزك بنجاح"); 
-     
+   $("#formElem").fadeOut();   
  $("#returnmessage").append("تم إرسال طلب حجزك بنجاح!");
- $("#returnmessage").fadeIn(); }
+ $("#returnmessage").fadeIn();
+  }
  
  else 
  
