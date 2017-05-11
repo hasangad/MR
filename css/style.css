@@ -34,8 +34,10 @@ table, th, td {
 
 body { background:#ffffff  url(../images/bg.jpg) top right no-repeat fixed; background-size:200%; }
 
-.cars_list { display:block; margin-bottom: 30%;
+.cars_list { display:block; 
     overflow: hidden; }
+	
+	.cars_list , .about { margin-bottom: 30%; }
 
 .madad_body {
 }
@@ -92,19 +94,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 
 
 .home-icons a i {
+	width:100%;
 	    display: block;
     padding: 25px 0px 0px 0px;
     color: #FC0;
     margin: 12px;
-    font-size: 40pt;
+    font-size: 25pt;
 }
 .home-icons a p {
 	display: block;
+		width:100%;
 	padding: 20px;
 	color: #FC0;
 	font-size:large;
 	white-space: nowrap;
-	font-weight: 700
+	font-weight: 700;
+	font-family: "Droid Arabic Kufi", tahoma;
 }
 
 .home-icons a.active { background:#FC0; }
@@ -129,13 +134,13 @@ iframe { background:#f0f0f0 }
 .about h4 { font-size: xx-large }
 .about p { font-size:x-large; line-height:165%;}
 .car-item ul { list-style:none }
-.car-item li { font-size: x-large; padding-top:10px; padding-bottom:10px; }
-.car-item h3 { font-size:xx-large }
+.car-item li { font-size: medium; padding-top:10px; padding-bottom:10px; }
+.car-item h3 { font-size: large }
 .btn { font-size:xx-large ; font-family:"Droid Arabic Kufi",tahoma; border-radius:0}
 
-form label { font-size:xx-large; font-family:"Droid Arabic Kufi",tahoma;  padding-top:20px; padding-bottom:20px; margin-bottom:10px; }
+form label { font-size: medium; font-family:"Droid Arabic Kufi",tahoma;  padding-top:20px; padding-bottom:20px; margin-bottom:10px; }
 
-.form-control { background:#f0f0f0; font-size:xx-large; padding-top:40px; padding-bottom:40px;font-family:"Droid Arabic Kufi",tahoma }
+.form-control { background:#f0f0f0; font-size: medium; padding-top:40px; padding-bottom:40px;font-family:"Droid Arabic Kufi",tahoma }
 
 
 
