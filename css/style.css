@@ -34,7 +34,8 @@ table, th, td {
 
 body { background:#ffffff  url(../images/bg.jpg) top right no-repeat fixed; background-size:200%; }
 
-.cars_list { display:block; }
+.cars_list { display:block; margin-bottom: 30%;
+    overflow: hidden; }
 
 .madad_body {
 }
