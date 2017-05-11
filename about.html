@@ -19,40 +19,16 @@
  
  */
  
- $(document).ready(function() { 
+ /*$(document).ready(function() { 
  $.getJSON("http://msyserp.com/api/?p=47&json=1",function(result){ 
  $.each(result, function(i , field){
  $("#output").append("<tr><td>"+ field.id + "</td><td>"+ field.title + "</td></tr>");
  });
  });
- /*$.ajax({
- type: "GET",
- url: "http://msyserp.com/web-service-api/?view_all=table&&admin=mallam",
- crossDomain: true,
- cache: false,
- success: function(result){
- var result=$.parseJSON(result);
- $.each(result, function(i, field){
- //$("#output").append("Title: "+ field.title + " duration: "+field.duration +" Price:"+field.price+"<br/>");
-  $("#output").append("<td>"+ field.id + "</td><td>"+field.title +"</td><td>"+field.type +"</td>");
 
- });
- }
  });*/
- });
- $(document).ready(function() {
-   /*var url="http://msyserp.com/?json=get_recent_posts";
-   $.getJSON(url,function(result){
-    $.each(result.posts, function(i, field){
-       var id=field.id;
-       $("#listview").append("<tr><td><h2>"+id+"<h2></td><td>"+field.title+"</td><td>"+field.type+"</td><tr>");
-    });
-   });*/
-  
-   
- });
- 
- function toggle_sidebar()
+
+ /*function toggle_sidebar()
         {
 			
             var sidebar = document.getElementById("sidebar");
@@ -67,36 +43,47 @@
             {
                 sidebar.style.right = "-35%";
             }
-        }
+        }*/
  </script>
 <link rel='stylesheet' id='bootstrap.min-css'  href='bs/css/bootstrap.min.css' type='text/css' media='all' />
 <link rel='stylesheet' id='bootstrap.min-css-rtl'  href='bs/css/bootstrap-rtl.min.css' type='text/css' media='all' />
 <link rel='stylesheet' id='bootstrap.min-css-controllers'  href='bs/css/controllers.css' type='text/css' media='all' />
+<link rel='stylesheet' id='css-style' href="css/fa/css/font-awesome.min.css" type='text/css' media='all' />
 <link rel='stylesheet' id='css-style'  href='css/style.css' type='text/css' media='all' />
 </head>
 <body>
 
-  <img class="toggle" src="images/icon-mobile.png" onclick="toggle_sidebar()" style="position: fixed; left: 10px; top: 10px" />
-        
-<div id="sidebar" style="position: fixed; display: inline-block; top: 0px; height: 100%; width: 35%; right: -35%; transition: all 0.5s ease-in-out;">
-<ul class="container no-padding">
-	<li><a href="index.html">الرئيسية</a></li>
-	<li><a href="about.html">عن مدد السعودية</a></li>
-	<li><a href="cars.html">السيارات</a></li>
-	<li><a href="reserve.html">حجز</a></li>
-	<li><a href="contact.html">التواصل</a></li>
-</ul>
-</div>
-
-<a href="index.html" class="container-fluid no-padding"><img src="images/logo-2.jpg" alt="" title="" width="567" height="256" class="logo"></a>
+<a href="index.html" class="container-fluid no-padding"><img src="images/logo.png" alt="" title="" width="567" height="256" class="logo"></a>
 
 <div class="madad_body container"> 
 
 <div class="hr"></div>
 
+<div class="home-icons">
+<a href="index.html" class="col-xs-4">
+<span class="col-xs-12">
+<i class="fa fa-home"></i>
+<p>الرئيسية</p>
+</span></a>
+
+<a href="about.html" class="col-xs-4 active">
+<span class="col-xs-12">
+<i class="fa fa-info"></i>
+<p>عن الشركة</p>
+</span></a>
+<a href="contact.html" class="col-xs-4">
+<span class="col-xs-12">
+<i class="fa fa-envelope"></i>
+<p>التواصل</p>
+</span>
+</a>
+</div>
+
+
+
+<div class="about">
 <h4>عن مدد السعودية</h4>
 <div class="hr"></div>
-
 <p>
 أسست مدد السعودية لتأجير السيارات عام 2016 حيث وصلت أفرع الشركة إلى 21 فرع بمدن الرياض وجدة والدمام ، ونطمح لزيادة فروعنا في الوقت القريب.
 
@@ -136,6 +123,7 @@
 
 جميع سياراتنا داخل التغطية التأمينية الشاملة مما يضمن التعويض الشامل في حال الحوادث .
 </p>
+</div>
 </div>
 <!-- End of madad body -->
 
