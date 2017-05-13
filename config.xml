@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.MadadRental"
-        version   = "4.1.4">
+        version   = "4.1.5">
 
     <name>مدد السعودية لتأجير السيارات</name>
 
@@ -113,7 +113,7 @@
 <splash src="images/splash.jpg" platform="android" qualifier="port-xxhdpi" />
 <splash src="images/splash.jpg" platform="android" qualifier="land-xxhdpi" />
 
-	<preference name="SplashScreenDelay" value="2000" />
+	<preference name="SplashScreenDelay" value="5000" />
 
 
 
