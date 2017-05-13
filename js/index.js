@@ -50,5 +50,7 @@ var app = {
 
 function exitFromApp()
              {
+				 
+				 //alert("test");
                 navigator.app.exitApp();
              }

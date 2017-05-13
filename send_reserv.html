@@ -5,6 +5,8 @@
 <title>مدد السعودية لتأجير السيارات</title>
 <!--<base href="http://madadrental.com/">-->
 <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
 <script type="text/javascript">
 
  
@@ -65,32 +67,39 @@ $(".car_id").val(car_id);
 <div class="madad_body container"> 
 
 <div class="home-icons">
-<a href="index.html" class="col-xs-4">
+<a href="index.html" class="col-xs-3">
 <span class="col-xs-12">
 <i class="fa fa-home"></i>
 <p>الرئيسية</p>
 </span></a>
 
-<a href="about.html" class="col-xs-4">
+<a href="about.html" class="col-xs-3">
 <span class="col-xs-12">
 <i class="fa fa-info"></i>
 <p>عن الشركة</p>
 </span></a>
 
-<a href="contact.html" class="col-xs-4">
+<a href="contact.html" class="col-xs-3">
 <span class="col-xs-12">
 <i class="fa fa-envelope"></i>
 <p>التواصل</p>
 </span>
 </a>
+
+<a class="col-xs-3"onclick="exitFromApp()">
+<span class="col-xs-12">
+<i class="fa  fa-power-off"></i>
+<p>خروج</p>
+</span>
+</a>
 </div>
 
-   <div class="about">
+   <div class="about no-padding">
    
    <div id="returnmessage" class="alert alert-success" style="display:none"></div>
 
   
-  <form id="formElem" name="formElem" action="" method="get">
+  <form id="formElem" name="formElem" action="" method="get" class="no-padding">
   <div class="col-xs-12"><label class="col-xs-3">الإسم</label> <input  id="name" type="text"  value="" class="name form-control col-xs-9"></div>
   <div class="col-xs-12"><label class="col-xs-3">رقم الجوال</label> <input  id="mobile" type="tel" value="" class="mobile form-control col-xs-9"></div>
   <div class="col-xs-12"><label class="col-xs-3">البريد الإلكتروني</label> <input  id="email" type="text" value="" class="email form-control col-xs-9"></div>
