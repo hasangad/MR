@@ -107,9 +107,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 		width:100%;
 	padding: 5px 0;
 	color: #FC0;
-	font-size: medium;
+	font-size: small;
 	white-space: nowrap;
-	font-weight: 700;
+	font-weight: 400;
 	font-family: "Droid Arabic Kufi", tahoma;
 	text-align:center;
 }
