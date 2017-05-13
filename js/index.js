@@ -48,9 +48,19 @@ var app = {
     }
 };
 
-function exitFromApp()
+/*function exitFromApp()
              {
 				 
 				 //alert("test");
                 navigator.app.exitApp();
-             }
+             }*/
+			 
+			 // Wait for PhoneGap to load
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
+    // alert("deviceready");
+    document.getElementsByClassName('exit_app').addEventListener('click', function() {
+        navigator.app.exitApp();
+    });
+}
