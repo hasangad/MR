@@ -97,10 +97,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 .home-icons a i {
 	width:100%;
 	display: block;
-    padding: 5px 0px 0px 0px;
+    padding: 0;
     color: #FC0;
-    margin: 12px 0;
-    font-size: 34px;
+    margin: 8px 0;
+    font-size: 28px;
 }
 .home-icons a p {
 	display: block;
