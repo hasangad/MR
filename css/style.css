@@ -95,11 +95,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 
 .home-icons a i {
 	width:100%;
-	    display: block;
+	display: block;
     padding: 25px 0px 0px 0px;
     color: #FC0;
-    margin: 12px;
-    font-size: 25pt;
+    margin: 12px 0;
+    font-size: 34px;
 }
 .home-icons a p {
 	display: block;
@@ -130,9 +130,9 @@ border-bottom:1px dashed #999;
 
 iframe { background:#f0f0f0 }
 
- .about { margin-top:20%; }
-.about h4 { font-size: xx-large }
-.about p { font-size:x-large; line-height:165%;}
+ .about { margin-top:20%; overflow: hidden; }
+.about h4 { font-size: large }
+.about p { font-size: medium; line-height:165%;}
 .car-item ul { list-style:none }
 .car-item li { font-size: medium; padding-top:10px; padding-bottom:10px; }
 .car-item h3 { font-size: large }
@@ -140,7 +140,10 @@ iframe { background:#f0f0f0 }
 
 form label { font-size: medium; font-family:"Droid Arabic Kufi",tahoma;  padding-top:20px; padding-bottom:20px; margin-bottom:10px; }
 
-.form-control { background:#f0f0f0; font-size: medium; padding-top:40px; padding-bottom:40px;font-family:"Droid Arabic Kufi",tahoma }
+.form-control { background:#f0f0f0; font-size: medium; padding-top:10px; padding-bottom:10px;font-family:"Droid Arabic Kufi",tahoma;}
+
+
+iframe  {  background:#CCC url(../images/ellipsis.gif) center center no-repeat;}
 
 
 
