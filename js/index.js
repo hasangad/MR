@@ -47,3 +47,8 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+function exitFromApp()
+             {
+                navigator.app.exitApp();
+             }
