@@ -114,6 +114,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 	text-align:center;
 }
 
+label { font-weight:400 }
+
 .home-icons a.active { background:#FC0; }
 .home-icons a.active i , .home-icons a.active p { color:#000000 }
 

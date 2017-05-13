@@ -59,8 +59,11 @@ var app = {
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-    // alert("deviceready");
+	
+    //alert("deviceready");
     document.getElementsByClassName('exit_app').addEventListener('click', function() {
+		
+		//alert("test");
         navigator.app.exitApp();
     });
 }
