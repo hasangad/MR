@@ -103,7 +103,7 @@
     <string>100</string>
     </gap:config-file>
 	
-	<<preference name="SplashScreenDelay" value="20000" />
+	<<preference name="SplashScreenDelay" value="2000" />
 
 	<splash src="images/splash.jpg" />
 	<splash src="images/splash.jpg" platform="android" qualifier="ldpi" />
