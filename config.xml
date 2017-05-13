@@ -113,7 +113,7 @@
 <splash src="images/splash.jpg" platform="android" qualifier="port-xxhdpi" />
 <splash src="images/splash.jpg" platform="android" qualifier="land-xxhdpi" />
 
-	<preference name="SplashScreenDelay" value="20000" />
+	<preference name="SplashScreenDelay" value="2000" />
 
 
 
