@@ -6,6 +6,11 @@
 <!--<base href="http://madadrental.com/">-->
 <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
 <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile.min.js"></script>
+<!--<script type="text/javascript" src="js/cordova.js"></script>
+<script type="text/javascript" src="js/cordova/require.js"></script>
+<script type="text/javascript" src="js/cordova/channel.js"></script>
+<script type="text/javascript" src="js/cordova/platform.js"></script>-->
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
  //https://phonegappro.com/tutorials/how-to-parse-read-json-using-phonegap-apache-cordova/
@@ -48,20 +53,14 @@
  </script>
 <link rel='stylesheet' id='bootstrap.min-css'  href='bs/css/bootstrap.min.css' type='text/css' media='all' />
 <link rel='stylesheet' id='bootstrap.min-css-rtl'  href='bs/css/bootstrap-rtl.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap.min-css-jquery-mobile' href="css/jquery.mobile.css"type='text/css' media='all' />
 <link rel='stylesheet' id='bootstrap.min-css-controllers'  href='bs/css/controllers.css' type='text/css' media='all' />
-<link rel='stylesheet' id='css-style' href="css/fa/css/font-awesome.min.css" type='text/css' media='all' />
+<link rel='stylesheet' id='css-style-da' href="css/fa/css/font-awesome.min.css" type='text/css' media='all' />
 <link rel='stylesheet' id='css-style'  href='css/style.css' type='text/css' media='all' />
 </head>
 <body>
         
 <div id="sidebar" style="position: fixed; display: inline-block; top: 0px; height: 100%; width: 35%; right: -35%; transition: all 0.5s ease-in-out;">
-<!--<ul class="container no-padding">
-		<li><a href="index.html">الرئيسية</a></li>
-	<li><a href="about.html">عن مدد السعودية</a></li>
-	<li><a href="cars.html">السيارات</a></li>
-	<li><a href="reserve.html">حجز</a></li>
-	<li><a href="contact.html">التواصل</a></li>
-</ul>-->
 </div>
 
 <a href="index.html" class="container-fluid no-padding"><img src="images/logo.png" alt="" title="" width="567" height="256" class="logo"></a>
@@ -286,14 +285,15 @@
 	<script>
 		$(document).ready(function(){
 			 // Wait for PhoneGap to load
-document.addEventListener("deviceready", onDeviceReady, false);
+//document.addEventListener("deviceready", onDeviceReady, false);
 
 //function onDeviceReady() {
 	
     //alert("deviceready");
-    document.getElementsByClassName('exit_app').addEventListener('click', function() {
+	$(".exit_app").click(function() {
+    //document.getElementsByClassName('exit_app').addEventListener('click'
 		
-		alert("Test Exit App");
+		//alert("Test Exit App");
         navigator.app.exitApp();
     });
 //}
