@@ -86,21 +86,6 @@
 <i class="fa fa-info"></i>
 <p>عن الشركة</p>
 </span></a>
-<!--
-<a href="cars.html" class="col-xs-3">
-<span class="col-xs-12">
-<i class="fa fa-car"></i>
-<p>السيارات</p>
-</span>
-</a>
-
-<a href="reserve.html" class="col-xs-12">
-<span class="col-xs-12">
-<i class="fa fa-ticket"></i>
-<p>حجز</p>
-</span>
-</a>-->
-
 
 <a href="contact.html" class="col-xs-3">
 <span class="col-xs-12">
@@ -303,15 +288,15 @@
 			 // Wait for PhoneGap to load
 document.addEventListener("deviceready", onDeviceReady, false);
 
-function onDeviceReady() {
+//function onDeviceReady() {
 	
     //alert("deviceready");
     document.getElementsByClassName('exit_app').addEventListener('click', function() {
 		
-		//alert("test");
+		alert("Test Exit App");
         navigator.app.exitApp();
     });
-}
+//}
 
 });
 	</script>
