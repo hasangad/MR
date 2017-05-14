@@ -67,6 +67,6 @@ function onDeviceReady() {
 		//alert("test");
         navigator.app.exitApp();
     });
-}
+}*/
 
 });
