@@ -68,5 +68,26 @@ function onDeviceReady() {
         navigator.app.exitApp();
     });
 }*/
+	
+	
+			 // Wait for PhoneGap to load
+//document.addEventListener("deviceready", onDeviceReady, false);
+			  //alert("Document is ready");
+
+function onDeviceReady() {
+	
+    //alert("deviceready");
+	$(".exit_app").click(function() {
+    //document.getElementsByClassName('exit_app').addEventListener('click'
+		
+		//alert("Test Exit App");
+        navigator.app.exitApp();
+    });
+}
+			
+			
+onDeviceReady();
+
+
 
 });
