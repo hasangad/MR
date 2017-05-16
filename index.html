@@ -282,21 +282,26 @@
   
 </div>
 <!-- End of madad body -->
+<script type="text/javascript" src="cordova.js"></script>
+<!--<script type="text/javascript" src="js/index.js"></script>-->
+<script type="text/javascript">
+            app.initialize();
+        </script>
 	<script>
 		$(document).ready(function(){
 			 // Wait for PhoneGap to load
 //document.addEventListener("deviceready", onDeviceReady, false);
 
-//function onDeviceReady() {
+function onDeviceReady() {
 	
-    //alert("deviceready");
+    alert("deviceready");
 	$(".exit_app").click(function() {
     //document.getElementsByClassName('exit_app').addEventListener('click'
 		
-		//alert("Test Exit App");
+		alert("Test Exit App");
         navigator.app.exitApp();
     });
-//}
+}
 
 });
 	</script>
