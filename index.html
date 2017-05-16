@@ -288,29 +288,5 @@
 <script type="text/javascript">
             app.initialize();
         </script>
-	<script>
-		$(document).ready(function(){
-			 // Wait for PhoneGap to load
-//document.addEventListener("deviceready", onDeviceReady, false);
-			
-			  alert("Document is ready");
-
-function onDeviceReady() {
-	
-    alert("deviceready");
-	$(".exit_app").click(function() {
-    //document.getElementsByClassName('exit_app').addEventListener('click'
-		
-		alert("Test Exit App");
-        navigator.app.exitApp();
-    });
-}
-			
-			
-			onDeviceReady();
-
-});
-	</script>
-
 </body>
 </html>
