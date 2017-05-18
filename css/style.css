@@ -149,5 +149,9 @@ form label { font-size: medium; font-family:"Droid Arabic Kufi",tahoma;  padding
 
 iframe  {  background:#CCC url(../images/ellipsis.gif) center center no-repeat;}
 
+.map_me { display:block; margin-top:15px; width:100%; padding:20px 5px; font-size: medium; text-align:center; font-weight:700; background:#090; color:#ffffff; }
+
+.map_me i { margin-left:6px; }
+
 
 
