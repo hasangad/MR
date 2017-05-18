@@ -144,12 +144,18 @@ iframe { background:#f0f0f0 }
 
 form label { font-size: medium; font-family:"Droid Arabic Kufi",tahoma;  padding-top:20px; padding-bottom:20px; margin-bottom:10px; }
 
-.form-control { background:#f0f0f0; font-size: medium; padding-top:10px; padding-bottom:10px;font-family:"Droid Arabic Kufi",tahoma;}
+.form-control {    border-radius: 25px;
+    background: #f0f0f0;
+    font-size: medium;
+	/*padding:10px;*/
+    font-family: "Droid Arabic Kufi",tahoma;
+    height: auto;}
 
 
 iframe  {  background:#CCC url(../images/ellipsis.gif) center center no-repeat;}
 
 .map_me { display:block; margin-top:15px; width:100%; padding:20px 5px; font-size: medium; text-align:center; font-weight:700; background:#090; color:#ffffff; }
+.map_me:active { background:#FC0; text-decoration:none }
 
 .map_me i { margin-left:6px; }
 
