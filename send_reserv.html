@@ -58,11 +58,10 @@ $(".car_id").val(car_id);
    <div class="about container-fluid no-padding">
    <div id="returnmessage" class="alert alert-success" style="display:none"></div>
   <form id="formElem" name="formElem" action="" method="get" class="no-padding">
-  <div class="col-xs-12 no-padding"><label class="col-xs-12">الإسم</label> <input  id="name" type="text"  value="" class="name form-control col-xs-12"></div>
-  <div class="col-xs-12 no-padding"><label class="col-xs-12">رقم الجوال</label> <input  id="mobile" type="tel" value="" class="mobile form-control col-xs-12"></div>
-  <div class="col-xs-12 no-padding"><label class="col-xs-12">البريد الإلكتروني</label> <input  id="email" type="text" value="" class="email form-control col-xs-12"></div>
+  <div class="col-xs-12 no-padding"><input  id="name" type="text"  value="" placeholder="الإسم" class="name form-control col-xs-12"></div>
+  <div class="col-xs-12 no-padding"><input  id="mobile" type="tel" value="" placeholder="رقم الجوال" class="mobile form-control col-xs-12"></div>
+  <div class="col-xs-12 no-padding"><input  id="email" type="text" value="" placeholder="البريد الإلكتروني" class="email form-control col-xs-12"></div>
   <div class="col-xs-12 no-padding">
-        <label class="col-xs-4"> مكان الحجز</label>
           <select name="pickup_location_id" id="pickup_location_id" class="home-select form-control col-xs-12" required>
             <option value="" selected="selected">مدينة / المكان:</option>
             <option value="12">الدمام 1 - حى الاتصالات - شارع الامير نايف محل 6</option>
@@ -84,10 +83,10 @@ $(".car_id").val(car_id);
           </select>
           </div>
 <div class="col-xs-12 no-padding">
-                <label class="col-xs-12">التاريخ</label>
-          <input id="pickup_date" name="pickup_date" type="date" value="التاريخ" class="form-control col-xs-12" required>
+                <!--<label class="col-xs-12">التاريخ</label>-->
+          <input id="pickup_date" name="pickup_date" type="date" value="التاريخ" placeholder="التاريخ" class="form-control col-xs-12" required>
         </div>
-   <div class="col-xs-12 no-padding"><label class="col-xs-12">ملاحظات</label> <textarea id="message" rows="10" class="notes form-control col-xs-12"></textarea></div>
+   <div class="col-xs-12 no-padding"><textarea id="message" rows="10" class="notes form-control col-xs-12" placeholder="ملاحظات"></textarea></div>
    <input type="hidden" class="car_id" id="car_id" name="car_id">
   <div class="hr"></div>
    <div class="col-xs-12 no-padding"><button type="button" id="submit" class="btn btn-lg btn-success col-xs-12"  onclick="">إرسال طلب الحجز</button></div>
