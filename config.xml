@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
@@ -106,6 +106,7 @@
     <string>100</string>
     </gap:config-file>
 	
+<!--<splash src="images/splash.jpg" />-->
 
 <splash src="images/splash.jpg" platform="android" qualifier="ldpi" />
 <splash src="images/splash.jpg" platform="android" qualifier="mdpi" />
@@ -119,9 +120,10 @@
     <splash src="res/screen/ios/screen-iphone-portrait-2x.png"      platform="ios"     width="640" height="960" />
     <splash src="res/screen/ios/screen-iphone-portrait-568h-2x.png" platform="ios"     width="640" height="1136" />
     <splash src="res/screen/ios/screen-ipad-portrait.png"           platform="ios"     width="768" height="1024" />
+    <splash src="res/screen/ios/screen-ipad-portrait.png"           platform="ios"     width="750" height="1334" />
     <splash src="res/screen/ios/screen-ipad-landscape.png"          platform="ios"     width="1024" height="768" />
+    <splash src="res/screen/ios/screen-ipad-landscape.png"          platform="ios"     width="1334" height="750" />
 	
-<splash src="images/splash.jpg" />
 
 
 	<preference name="SplashScreenDelay" value="5000" />
