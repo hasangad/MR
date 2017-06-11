@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.MadadRental"
-        version   = "4.2.9">
+        version   = "4.3.0">
 
     <name>مدد السعودية لتأجير السيارات</name>
 
@@ -116,13 +116,20 @@
 <splash src="images/splash.jpg" platform="android" qualifier="port-xxhdpi" />
 <splash src="images/splash.jpg" platform="android" qualifier="land-xxhdpi" />
 	
-	<splash src="res/screen/ios/screen-iphone-portrait.png"         platform="ios"     width="320" height="480" />
-    <splash src="res/screen/ios/screen-iphone-portrait-2x.png"      platform="ios"     width="640" height="960" />
-    <splash src="res/screen/ios/screen-iphone-portrait-568h-2x.png" platform="ios"     width="640" height="1136" />
-    <splash src="res/screen/ios/screen-ipad-portrait.png"           platform="ios"     width="768" height="1024" />
-    <splash src="res/screen/ios/screen-ipad-portrait.png"           platform="ios"     width="750" height="1334" />
-    <splash src="res/screen/ios/screen-ipad-landscape.png"          platform="ios"     width="1024" height="768" />
-    <splash src="res/screen/ios/screen-ipad-landscape.png"          platform="ios"     width="1334" height="750" />
+	<splash src="res/screen/ios/screen-iphone-portrait.png"         platform="ios"     width="320" height="480" /><!-- -->
+    <splash src="res/screen/ios/screen-iphone-portrait-2x.png"      platform="ios"     width="640" height="960" /><!-- -->
+    <splash src="res/screen/ios/screen-iphone-portrait-568h-2x.png" platform="ios"     width="640" height="1136" /><!-- -->
+    <splash src="res/screen/ios/screen-ipad-portrait.png"           platform="ios"     width="768" height="1024" /><!-- -->
+    <splash src="res/screen/ios/screen-ipad-portrait.png"           platform="ios"     width="750" height="1334" /><!-- iPhone 7, iPhone 6s -->
+    <splash src="res/screen/ios/screen-ipad-portrait.png"           platform="ios"     width="1242" height="2208" /><!--iPhone 7 Plus, iPhone 6s Plus -->
+    <splash src="res/screen/ios/screen-ipad-portrait.png"           platform="ios"     width="640" height="1136" /><!--iPhone SE -->
+    <splash src="res/screen/ios/screen-ipad-portrait.png"           platform="ios"     width="2048" height="2732" /><!--12.9-inch iPad Pro-->
+    <splash src="res/screen/ios/screen-ipad-portrait.png"           platform="ios"     width="1536" height="2048" /><!--9.7-inch iPad Pro, iPad Air 2, iPad mini 4, iPad mini 2-->
+    <splash src="res/screen/ios/screen-ipad-landscape.png"          platform="ios"     width="1024" height="768" /><!-- -->
+    <splash src="res/screen/ios/screen-ipad-landscape.png"          platform="ios"     width="1334" height="750" /><!-- iPhone 7, iPhone 6s -->
+    <splash src="res/screen/ios/screen-ipad-landscape.png"          platform="ios"     width="2208" height="1242" /><!-- iPhone 7 Plus, iPhone 6s Plus -->
+    <splash src="res/screen/ios/screen-ipad-landscape.png"          platform="ios"     width="1136" height="640" /><!-- iPhone SE -->
+    <splash src="res/screen/ios/screen-ipad-landscape.png"          platform="ios"     width="2048" height="1536" /><!-- 9.7-inch iPad Pro, iPad Air 2, iPad mini 4, iPad mini 2 -->
 	
 
 
