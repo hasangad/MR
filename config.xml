@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.MadadRental"
-        version   = "4.2.8">
+        version   = "4.2.9">
 
     <name>مدد السعودية لتأجير السيارات</name>
 
@@ -107,8 +107,7 @@
     </gap:config-file>
 	
 
-	<splash src="images/splash.jpg" />
-	<splash src="images/splash.jpg" platform="android" qualifier="ldpi" />
+<splash src="images/splash.jpg" platform="android" qualifier="ldpi" />
 <splash src="images/splash.jpg" platform="android" qualifier="mdpi" />
 <splash src="images/splash.jpg" platform="android" qualifier="hdpi" />
 <splash src="images/splash.jpg" platform="android" qualifier="xhdpi" />
@@ -121,6 +120,9 @@
     <splash src="res/screen/ios/screen-iphone-portrait-568h-2x.png" platform="ios"     width="640" height="1136" />
     <splash src="res/screen/ios/screen-ipad-portrait.png"           platform="ios"     width="768" height="1024" />
     <splash src="res/screen/ios/screen-ipad-landscape.png"          platform="ios"     width="1024" height="768" />
+	
+<splash src="images/splash.jpg" />
+
 
 	<preference name="SplashScreenDelay" value="5000" />
 
