@@ -17,17 +17,17 @@ $(document).ready(function() {
 
   /*var url="http://app.madadrental.com/send-mail.php?name1="+name+"&email1="+email+"&car_id1="+car_id+"&message1="+message+"&contact1="+contact+"&pickup_location_id1="+pickup_location_id+"&pickup_date1="+pickup_date+"&pickup_time1="+pickup_time+"&dropoff_location_id1="+dropoff_location_id+"&dropoff_date1="+dropoff_date+"&dropoff_time1="+dropoff_time+"&body_type_id1="+body_type_id+"&fuel_type_id1="+fuel_type_id+"";*/
   var url ="http://madadrental.com/app-loc-array/";
-  $.getJSON(url,function(result){ 
+  $.getJSON(url,function(result){
         //console.log(result);
 
  $.each(result, function(i , loc){
-     
+
      /*$(".about").append('<div class="row no-padding"><h2>'+loc.loc.title+'</h2><h3>الهاتف : '+loc.loc.phn+'</h3><iframe width="100%" height="200" frameborder="0" style="border:1px solid #f0f0f0; height:200px" src="https://www.google.com/maps/embed/v1/place?q='+loc.loc.lat+','+loc.loc.lng+'&amp;key=AIzaSyBy6xPT2Cwvz9SLwDHXticdg3Hr88YHi10"></iframe></div><br>');*/
-	 
-	  $(".about").append('<div class="row no-padding"><h2>'+loc.loc.title+'</h2><h3>الهاتف : '+loc.loc.phn+'</h3><a class="map_me" href="http://maps.google.com/maps?&z=18&q='+loc.loc.lat+'+'+loc.loc.lng+'&ll=+loc.loc.lat+'+'+loc.loc.lng+"><i class="fa fa-map-marker"></i>عرض على الخرائط</a></div><br>');
-	 
+
+	  $(".about").append('<div class="col-xs-6"><h2>'+loc.loc.title+'</h2><h3>الهاتف : '+loc.loc.phn+'</h3><a class="map_me" href="http://maps.google.com/maps?&z=18&q='+loc.loc.lat+'+'+loc.loc.lng+'&ll=+loc.loc.lat+'+'+loc.loc.lng+"><i class="fa fa-map-marker"></i>عرض على الخرائط</a></div>');
+
  });
- 
+
 });
 });
 </script>
@@ -37,7 +37,7 @@ $(document).ready(function() {
 
 <a href="index.html" class="container-fluid no-padding"><img src="images/logo.png" alt="" title="" width="567" height="256" class="logo"></a>
 
-<div class="madad_body container"> 
+<div class="madad_body container">
 
 <div class="home-icons">
 <a href="index.html" class="col-xs-4 no-padding">
@@ -66,7 +66,7 @@ $(document).ready(function() {
 </span>
 </a>-->
 </div>
-	
+
 <div class="hr"></div>
 <div class="about container">
 
