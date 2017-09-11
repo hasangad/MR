@@ -155,8 +155,9 @@ width: 100%;}
 
 
 iframe  {  background:#CCC url(../images/ellipsis.gif) center center no-repeat;}
-
-.map_me { display:block; margin-top:15px; width:100%; padding:20px 5px; font-size: medium; text-align:center; font-weight:700; background:#090; color:#ffffff; }
+.contact h2 { font-size: 16px;}
+.contact h3 { font-size: 14px;}
+.map_me { display:block; margin-top:15px; width:100%; padding:20px 5px; font-size: 14px; text-align:center; font-weight:700; background:#090; color:#ffffff; }
 .map_me:active { background:#FC0; text-decoration:none }
 
 .map_me i { margin-left:6px; }
