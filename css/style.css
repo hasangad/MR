@@ -8,10 +8,10 @@ h1 {
 	font-size: xx-large;
 }
 h2 {
-	font-size: x-large
+	font-size: large
 }
 h3 {
-	font-size: large
+	font-size: medium
 }
 h4 {
 	font-size: medium
@@ -35,9 +35,9 @@ table, th, td {
 
 body { background:#ffffff  url(../images/bg.jpg) top right no-repeat fixed; background-size:200%; }
 
-.cars_list { display:block; 
+.cars_list { display:block;
     overflow: hidden; }
-	
+
 	.cars_list , .about { margin-bottom: 30%; }
 
 .madad_body {
@@ -85,8 +85,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 	border-bottom: #954A00 1px solid
 }
 
-.home-icons { position:fixed; bottom:0; left:0; background:#030; width:100%; z-index:99  }
-.home-icons a { background: none; border-left:1px solid #000; }
+.home-icons { position:fixed; bottom:0; left:0; background:#f4f4f4; width:100%; z-index:99; border-top:1px solid #c5c5c5;  }
 .home-icons a:last-child { border-left:none }
 .home-icons a span {
 	text-align: center;
@@ -98,15 +97,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 	width:100%;
 	display: block;
     padding: 0;
-    color: #FC0;
+    color: #888888;
     margin: 8px 0;
-    font-size: 28px;
+    font-size: 36px;
 }
 .home-icons a p {
 	display: block;
 		width:100%;
 	padding: 5px 0;
-	color: #FC0;
+	color: #888888;
 	font-size: small;
 	white-space: nowrap;
 	font-weight: 400;
@@ -116,20 +115,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 
 label { font-weight:400 }
 
-.home-icons a.active { background:#FC0; }
-.home-icons a.active i , .home-icons a.active p { color:#000000 }
+.home-icons a.active i { color:#FC0; }
+.home-icons a.active i , .home-icons a.active p { color:#75ad2b }
 
 .home-icons a:active {  background:#FC0; }
 .home-icons a:active i , .home-icons a:active p { color:#000000 }
 
 
-.car-item { 
-background: #f9f9f9;
+.car-item {
+/*background: #f9f9f9;
 background: -moz-linear-gradient(top, #f9f9f9 0%, #ededed 100%);
 background: -webkit-linear-gradient(top, #f9f9f9 0%,#ededed 100%);
 background: linear-gradient(to bottom, #f9f9f9 0%,#ededed 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#ededed',GradientType=0 );
-border-bottom:1px dashed #999;
+border-bottom:1px dashed #999;*/
+padding:20px;
 }
 
 iframe { background:#f0f0f0 }
@@ -138,18 +138,20 @@ iframe { background:#f0f0f0 }
 .about h4 { font-size: large }
 .about p { font-size: medium; line-height:165%;}
 .car-item ul { list-style:none }
-.car-item li { font-size: medium; padding-top:10px; padding-bottom:10px; }
+.car-item li { font-size: 18px; padding-top:10px; padding-bottom:10px; }
 .car-item h3 { font-size: large }
-.btn { font-size:xx-large ; font-family:"Droid Arabic Kufi",tahoma; border-radius:0}
+.btn { font-size:large ; font-family:"Droid Arabic Kufi",tahoma; border-radius:0}
 
 form label { font-size: medium; font-family:"Droid Arabic Kufi",tahoma;  padding-top:20px; padding-bottom:20px; margin-bottom:10px; }
 
 .form-control {    border-radius: 25px;
-    background: #f0f0f0;
+    background: #f7f7f7;
     font-size: medium;
 	/*padding:10px;*/
     font-family: "Droid Arabic Kufi",tahoma;
-    height: auto;}
+    height: auto;
+	margin-bottom: 10px;
+width: 100%;}
 
 
 iframe  {  background:#CCC url(../images/ellipsis.gif) center center no-repeat;}
@@ -158,6 +160,3 @@ iframe  {  background:#CCC url(../images/ellipsis.gif) center center no-repeat;}
 .map_me:active { background:#FC0; text-decoration:none }
 
 .map_me i { margin-left:6px; }
-
-
-
