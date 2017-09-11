@@ -155,8 +155,8 @@ width: 100%;}
 
 
 iframe  {  background:#CCC url(../images/ellipsis.gif) center center no-repeat;}
-.contact h2 { font-size: 14px;}
-.contact h3 { font-size: 12px; font-weight: normal;}
+.contact h2 { font-size: 14px;white-space: nowrap;}
+.contact h3 { font-size: 12px; font-weight: normal; white-space: nowrap;}
 .map_me { display:block; margin-top:15px; width:100%; padding:10px 5px; font-size: 12px; text-align:center; font-weight:700; background:#090; color:#ffffff; }
 .map_me:active { background:#FC0; text-decoration:none }
 
