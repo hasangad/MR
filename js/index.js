@@ -49,6 +49,22 @@ var app = {
     }
 };
 
+	
+	var push = PushNotification.init({
+    android: {
+        senderID: "1067921236443"
+    },
+    ios: {
+        senderID: "1067921236443",
+        gcmSandbox: true,
+        alert: "true",
+        badge: true,
+        sound: 'true'
+    },
+    windows: {}
+});
+	
+	
 /*function exitFromApp()
              {
 				 
