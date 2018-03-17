@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>مدد السعودية لتأجير السيارات</title>
+<!--<base href="http://madadrental.com/">-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<link rel='stylesheet' id='bootstrap.min-css'  href='bs/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap.min-css-rtl'  href='bs/css/bootstrap-rtl.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap.min-css-controllers'  href='bs/css/controllers.css' type='text/css' media='all' />
+<link rel='stylesheet' id='css-style' href="css/fa/css/font-awesome.min.css" type='text/css' media='all' />
+<link rel='stylesheet' id='css-style'  href='css/style.css' type='text/css' media='all' />
+ <script>
+$(document).ready(function() {
+
+  /*var url="http://app.madadrental.com/send-mail.php?name1="+name+"&email1="+email+"&car_id1="+car_id+"&message1="+message+"&contact1="+contact+"&pickup_location_id1="+pickup_location_id+"&pickup_date1="+pickup_date+"&pickup_time1="+pickup_time+"&dropoff_location_id1="+dropoff_location_id+"&dropoff_date1="+dropoff_date+"&dropoff_time1="+dropoff_time+"&body_type_id1="+body_type_id+"&fuel_type_id1="+fuel_type_id+"";*/
+  var url ="http://madadrental.com/app-loc-array/";
+  $.getJSON(url,function(result){
+        //console.log(result);
+
+ $.each(result, function(i , loc){
+
+     /*$(".about").append('<div class="row no-padding"><h2>'+loc.loc.title+'</h2><h3>الهاتف : '+loc.loc.phn+'</h3><iframe width="100%" height="200" frameborder="0" style="border:1px solid #f0f0f0; height:200px" src="https://www.google.com/maps/embed/v1/place?q='+loc.loc.lat+','+loc.loc.lng+'&amp;key=AIzaSyBy6xPT2Cwvz9SLwDHXticdg3Hr88YHi10"></iframe></div><br>');*/
+
+	  $(".about").append('<div class="col-xs-6"><h2>'+loc.loc.title+'</h2><h3>الهاتف : '+loc.loc.phn+'</h3><a class="map_me" href="http://maps.google.com/maps?&z=18&q='+loc.loc.lat+'+'+loc.loc.lng+'&ll=+loc.loc.lat+'+'+loc.loc.lng+"><i class="fa fa-map-marker"></i>عرض على الخرائط</a></div>');
+
+ });
+
+});
+});
+</script>
+
+</head>
+<body>
+
+<a href="index.html" class="container-fluid no-padding"><img src="images/logo.png" alt="" title="" width="567" height="256" class="logo"></a>
+
+<div class="madad_body container-fluid contact">
+
+<div class="home-icons">
+<a href="index.html" class="col-xs-4 no-padding">
+<span class="col-xs-12 no-padding">
+<i class="fa fa-home"></i>
+<p>الرئيسية</p>
+</span></a>
+
+<a href="about.html" class="col-xs-4 no-padding">
+<span class="col-xs-12 no-padding">
+<i class="fa fa-info"></i>
+<p>عن الشركة</p>
+</span></a>
+
+<a href="contact.html" class="col-xs-4 no-padding active">
+<span class="col-xs-12 no-padding">
+<i class="fa fa-envelope"></i>
+<p>التواصل</p>
+</span>
+</a>
+
+<!--<a class="col-xs-3 no-padding exit_app">
+<span class="col-xs-12 no-padding">
+<i class="fa  fa-power-off"></i>
+<p>خروج</p>
+</span>
+</a>-->
+</div>
+
+<div class="hr"></div>
+<div class="about container-fluid no-padding">
+
+
+</div><!-- End of about -->
+
+
+</div>
+<!-- End of madad body -->
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<!--<script type="text/javascript" src="js/index.js"></script>-->
+<script type="text/javascript">
+            app.initialize();
+        </script>
+
+</body>
+</html>
